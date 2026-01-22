@@ -1,0 +1,31 @@
+id: OPENVAS-IMPORT-001
+name: OpenVAS Scan Import
+category: Vulnerability
+description: Import OpenVAS (Greenbone) scan result via XML
+type: command
+
+inputs:
+  - name: REPORT_FILE
+    description: OpenVAS XML report file
+    required: true
+
+command:
+  exec: python3
+  args:
+    - scripts/parse_openvas.py
+    - "{{REPORT_FILE}}"
+
+parser:
+  type: json
+  findings:
+    - id: id
+      title: name
+      severity: severity
+      description: description
+      solution: solution
+      cvss: cvss
+
+risk:
+  scoring:
+    source: cvss
+    scale: 10
