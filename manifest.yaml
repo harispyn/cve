@@ -1,0 +1,8 @@
+version: "1.0.0"
+name: "CVE Import Templates"
+description: "CVE import and enrichment templates for Sirius"
+author: "harispyn"
+type: "template-repository"
+
+templates:
+  - templates/cve/cve-import.yaml
