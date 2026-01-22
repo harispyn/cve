@@ -1,9 +1,0 @@
-version: "1.0.0"
-name: "Custom Vulnerability Templates"
-description: "OpenVAS & Nessus templates for Sirius"
-author: "custom"
-type: "template-repository"
-
-templates:
-  - templates/openvas/openvas-import.yaml
-  - templates/nessus/nessus-import.yaml
